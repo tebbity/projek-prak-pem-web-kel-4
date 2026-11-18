@@ -27,7 +27,7 @@ if(isset($_SESSION["status_login"]) && $_SESSION["status_login"] == true){
                             echo '<div class="alert alert-danger" role="alert">Login gagal! Username atau password salah.</div>';
                         }
                         ?>
-                        <form action="login_process.php" method="POST">
+                        <form action="login_proses.php" method="POST">
                             <div class="mb-3">
                                 <label for="username" class="form-label">Username</label>
                                 <input type="text" class="form-control" id="username" name="username" required>
@@ -40,6 +40,8 @@ if(isset($_SESSION["status_login"]) && $_SESSION["status_login"] == true){
                         </form>
                         <div class="text-center mt-3">
                             <a href="register.php" class="text-decoration-none">Belum punya akun?</a>
+                            <br>
+                            <a href="index.php" class="text-decoration-none">Kembali ke Home</a>
                         </div>
                     </div>
                 </div>
