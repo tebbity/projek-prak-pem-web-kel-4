@@ -1,127 +1,169 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
 
 :root {
-    --primary-court: #15803d;
-    --primary-dark: #14532d;
-    --accent-shuttle: #f59e0b;
-    --bg-surface: #f4f7f6;
+    --primary-pink: #ff758f;      
+    --primary-hover: #ff4d6d;     
+    --soft-lavender: #e0c3fc;     
+    --soft-peach: #ffccd5;        
+    --text-dark: #4a3b47;
 }
 
-body {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    background-color: var(--bg-surface) !important;
-    color: #1e293b;
+
+body, body.bg-light {
+    font-family: 'Plus Jakarta Sans', sans-serif !important ;
+    background: linear-gradient(135deg, #fff0f3 0%, #f8edeb 50%, #f3e8ff 100%)  !important; 
+    background-attachment: fixed !important;
+    color: var(--text-dark) !important;
+    min-height: 100vh;
 }
 
 /*Navbar*/
 .navbar.bg-dark {
-    background: linear-gradient(135deg, #0f172a 0%, #14532d 100%) !important;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    padding: 0.85rem 0;
+    background: linear-gradient(120deg, #ff8fab 0%, #ffb3c6 50%, #cdb4db 100%) !important;
+    box-shadow: 0 6px 20px rgba(255, 117, 143, 0.25);
+    padding: 0.95rem 0;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.4);
 }
 
 .navbar-brand {
-    font-weight: 700;
-    letter-spacing: -0.3px;
+    font-weight: 800;
+    letter-spacing: -0.4px;
+    color: #ffffff !important;
+    text-shadow: 0 2px 4px rgba(181, 23, 158, 0.15);
 }
 
 .nav-link {
-    font-weight: 500;
-    transition: color 0.2s ease;
+    font-weight: 600;
+    color: #ffffff !important;
+    padding: 0.5rem 1rem !important;
+    border-radius: 50px;
+    transition: color 0.25s ease;
 }
 
 .nav-link:hover, .nav-link.active {
-    color: #4ade80 !important;
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff !important;
+    transform: translateY(-2px);
 }
 
 /*Card & Container*/
 .card {
-    border: none;
-    border-radius: 14px;
-    box-shadow: 0 6px 20px rgba(15, 23, 42, 0.06);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 2px solid #ffe5ec !important;
+    border-radius: 24px !important;
+    background-color: rgba(255, 255, 255, 0.92) !important;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 12px 32px rgba(255, 117, 143, 0.14) !important;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.1);
+    transform: translateY(-4px);
+    box-shadow: 0 16px 38px rgba(255, 117, 143, 0.22) !important;
 }
+
 
 /*Tombol utama*/
-.btn-primary {
-    background-color: var(--primary-court);
-    border-color: var(--primary-court);
+.btn-primary, .btn-success {
+    background: linear-gradient(135deg, #ff758f 0%, #ff8fa3 100%) !important;
+    border: none !important;
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    border-radius: 50px !important;
+    padding: 0.65rem 1.5rem !important;
+    box-shadow: 0 6px 15px rgba(255, 117, 143, 0.35) !important;
+    transition: all 0.25s ease !important;
+}
+
+.btn-warning {
+    background-color: #ffd166 !important;
+    border: none !important;
+    color: #5c4700 !important;
+    border-radius: 50px !important;
     font-weight: 600;
-    border-radius: 8px;
-    padding: 0.5rem 1.1rem;
-    transition: all 0.2s ease;
 }
 
-.btn-primary:hover {
-    background-color: var(--primary-dark);
-    border-color: var(--primary-dark);
-    transform: rotateY(-1px);
+.btn-danger {
+    background-color: #ff6b6b !important;
+    border: none !important;
+    border-radius: 50px !important;
+    font-weight: 600;
 }
 
-.btn-warning, .btn-danger, .btn-success, .btn-secondary {
-    border-radius: 8px;
-    font-weight: 500;
+.btn-secondary, .btn-info {
+    background-color: #cdb4db !important;
+    border: none !important;
+    color: #3c096c !important;
+    border-radius: 50px !important;
+    font-weight: 600;
 }
 
-.btn-warning, .btn-danger, .btn-success, .btn-secondary, .btn-info {
-    border-radius: 8px;
-    font-weight: 500;
+
+a {
+    color: #e05780;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: #a4133c;
 }
 
 /*Tabel Data*/
 .table {
     background-color: #ffffff;
-    border-radius: 12px;
+    border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 8px 25px rgba(255, 117, 143, 0.1);
     vertical-align: middle;
+    border: 2px solid #ffe5ec;
 }
 
 .table thead th {
-    background-color: #1e293b !important;
+    background: linear-gradient(120deg, #ff8fab 0%, #ffb3c6 100%) !important;
     color: #ffffff !important;
-    font-weight: 600;
+    font-weight: 700;
     border: none;
-    padding: 12px 14px;
+    padding: 15px;
+    letter-spacing: 0.3px;
 }
 
 .table tbody tr {
-    transition: background-color 0.15s ease;
+    transition: background-color 0.2s ease;
 }
 
 .table tbody tr:hover {
-    background-color: #f0fdf4;
+    background-color: #fff0f3 !important;
 }
 
 /*Foto Thumbnail Lapangan di Tabel*/
 .table td img {
-    width: 90px;
-    height: 62px;
+    width: 92px;
+    height: 64px;
     object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    border-radius: 14px;
+    border: 2px solid #ffccd5;
+    box-shadow: 0 4px 10px rgba(255, 117, 143, 0.15);
     transition: transform 0.25s ease;
 }
 
 .table td img:hover {
-    transform: scale(1.12);
+    transform: scale(1.1);
 }
 
 /*Form Input*/
 .form-control, .form-select {
-    border-radius: 8px;
-    border: 1px solid #cbd5e1;
-    padding: 0.55rem 0.85rem;
+    border-radius: 14px !important;
+    border: 1.5px solid ffccd5 !important;
+    padding: 0.65rem 1rem !important;
+    background-color: #fffafb !important;
+    color: var(--text-dark) !important;
+    transition: all 0.2s ease;
 }
 
 .form-control:focus, .form-select:focus {
-    border-color: var(--primary-court);
-    box-shadow: 0 0 0 0.2rem rgba(21, 128, 61, 0.2);
+    border-color: #ff758f !important;
+    background-color: #ffffff !important;
+    box-shadow: 0 0 0 0.25rem rgba(255, 117, 143, 0.22) !important;
 }
 
 /*Preview Foto Sebelum Upload*/
@@ -129,9 +171,10 @@ body {
     max-width: 220px;
     max-height: 150px;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 16px;
     margin-top: 10px;
-    border: 2px dashed #15803d;
-    padding: 4px;
+    border: 2px dashed #ff758f ;
+    padding: 6px;
+    background-color: #fff0f3;
     display: none;
 }
