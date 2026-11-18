@@ -16,28 +16,29 @@ if (isset($_POST['update'])) {
     $harga  = $_POST['harga_per_jam'];
     $status = $_POST['status'];
 
-    if(!empty($_FILES['foto']['name'])){
-        $foto = $_FILES['foto']['name'];
+    if (!empty($_FILES['foto']['name'])) {
+        $foto      = $_FILES['foto']['name'];
         $nama_baru = time() . "_" . $foto;
         move_uploaded_file($_FILES['foto']['tmp_name'], "../uploads/" . $nama_baru);
 
-        if(!empty($row['foto']) && file_exists("../uploads/" . $row['foto'])){
-            unlink("../uploads" . $row['foto']);
+        if (!empty($row['foto']) && file_exists("../uploads/" . $row['foto'])) {
+            unlink("../uploads/" . $row['foto']);
         }
 
-        mysqli_query($koneksi, "UPDATE lapangan SET
-        nama_lapangan = '$nama',
-        jenis_lantai  = '$lantai',
-        harga_per_jam = '$harga',
-        status = '$status',
-        foto = '$nama_baru'
-        WHERE id_lapangan = '$id' ");
-    }else{
         mysqli_query($koneksi, "UPDATE lapangan SET
             nama_lapangan = '$nama',
             jenis_lantai  = '$lantai',
             harga_per_jam = '$harga',
-            status = '$status'");
+            status        = '$status',
+            foto          = '$nama_baru'
+            WHERE id_lapangan = '$id'");
+    } else {
+        mysqli_query($koneksi, "UPDATE lapangan SET
+            nama_lapangan = '$nama',
+            jenis_lantai  = '$lantai',
+            harga_per_jam = '$harga',
+            status        = '$status'
+            WHERE id_lapangan = '$id'");
     }
 
     header("Location: index.php");
@@ -90,5 +91,6 @@ if (isset($_POST['update'])) {
     </form>
 </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js"></script>    
+    <script src="../script.js"></script>
 </body>
 </html>
