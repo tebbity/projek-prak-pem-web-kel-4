@@ -1,17 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
 
 :root {
-    --primary-pink: #ff758f;      
-    --primary-hover: #ff4d6d;     
-    --soft-lavender: #e0c3fc;     
-    --soft-peach: #ffccd5;        
-    --text-dark: #4a3b47;
+    --primary-lilac: #8b5cf6;    
+    --primary-hover: #7c3aed;   
+    --accent-purple: #c4b5fd;     
+    --bg-lavender: #f5f3ff;        
+    --text-dark: #3b3054;
 }
 
 
 body, body.bg-light {
     font-family: 'Plus Jakarta Sans', sans-serif !important ;
-    background: linear-gradient(135deg, #fff0f3 0%, #f8edeb 50%, #f3e8ff 100%)  !important; 
+    background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 50%, #faf5ff 100%)  !important; 
     background-attachment: fixed !important;
     color: var(--text-dark) !important;
     min-height: 100vh;
@@ -19,8 +19,8 @@ body, body.bg-light {
 
 /*Navbar*/
 .navbar.bg-dark {
-    background: linear-gradient(120deg, #ff8fab 0%, #ffb3c6 50%, #cdb4db 100%) !important;
-    box-shadow: 0 6px 20px rgba(255, 117, 143, 0.25);
+    background: linear-gradient(120deg, #8b5cf6 0%, #a78bfa 50%, #c084fc 100%) !important;
+    box-shadow: 0 6px 20px rgba(139, 92, 246, 0.25);
     padding: 0.95rem 0;
     border-bottom: 2px solid rgba(255, 255, 255, 0.4);
 }
@@ -29,7 +29,7 @@ body, body.bg-light {
     font-weight: 800;
     letter-spacing: -0.4px;
     color: #ffffff !important;
-    text-shadow: 0 2px 4px rgba(181, 23, 158, 0.15);
+    text-shadow: 0 2px 4px rgba(76, 29, 149, 0.15);
 }
 
 .nav-link {
@@ -48,64 +48,64 @@ body, body.bg-light {
 
 /*Card & Container*/
 .card {
-    border: 2px solid #ffe5ec !important;
+    border: 2px solid #ede9fe!important;
     border-radius: 24px !important;
-    background-color: rgba(255, 255, 255, 0.92) !important;
+    background-color: rgba(255, 255, 255, 0.94) !important;
     backdrop-filter: blur(8px);
-    box-shadow: 0 12px 32px rgba(255, 117, 143, 0.14) !important;
+    box-shadow: 0 12px 32px rgba(139, 92, 246, 0.12) !important;
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 16px 38px rgba(255, 117, 143, 0.22) !important;
+    box-shadow: 0 16px 38px rgba(139, 92, 246, 0.2) !important;
 }
 
 
 /*Tombol utama*/
 .btn-primary, .btn-success {
-    background: linear-gradient(135deg, #ff758f 0%, #ff8fa3 100%) !important;
+    background: linear-gradient(135deg,#8b5cf6 0%, #a78bfa 100%) !important;
     border: none !important;
     color: #ffffff !important;
     font-weight: 700 !important;
     border-radius: 50px !important;
     padding: 0.65rem 1.5rem !important;
-    box-shadow: 0 6px 15px rgba(255, 117, 143, 0.35) !important;
+    box-shadow: 0 6px 15px rgba(139, 92, 246, 0.3) !important;
     transition: all 0.25s ease !important;
 }
 
 .btn-warning {
-    background-color: #ffd166 !important;
+    background-color: #fde047 !important;
     border: none !important;
-    color: #5c4700 !important;
+    color: #713f12 !important;
     border-radius: 50px !important;
     font-weight: 600;
 }
 
 .btn-danger {
-    background-color: #ff6b6b !important;
+    background-color: #fb7185 !important;
     border: none !important;
     border-radius: 50px !important;
     font-weight: 600;
 }
 
 .btn-secondary, .btn-info {
-    background-color: #cdb4db !important;
+    background-color: #cbd5e1 !important;
     border: none !important;
-    color: #3c096c !important;
+    color: #334155 !important;
     border-radius: 50px !important;
     font-weight: 600;
 }
 
 
 a {
-    color: #e05780;
+    color: #7c3aed;
     font-weight: 600;
     transition: color 0.2s ease;
 }
 
 a:hover {
-    color: #a4133c;
+    color: #4c1d95;
 }
 
 /*Tabel Data*/
@@ -113,13 +113,13 @@ a:hover {
     background-color: #ffffff;
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 8px 25px rgba(255, 117, 143, 0.1);
+    box-shadow: 0 8px 25px rgba(139, 92, 246, 0.08);
     vertical-align: middle;
-    border: 2px solid #ffe5ec;
+    border: 2px solid #ede9fe;
 }
 
 .table thead th {
-    background: linear-gradient(120deg, #ff8fab 0%, #ffb3c6 100%) !important;
+    background: linear-gradient(120deg, #8b5cf6 0%, #a78bfa 100%) !important;
     color: #ffffff !important;
     font-weight: 700;
     border: none;
@@ -132,7 +132,7 @@ a:hover {
 }
 
 .table tbody tr:hover {
-    background-color: #fff0f3 !important;
+    background-color: #f5f3ff !important;
 }
 
 /*Foto Thumbnail Lapangan di Tabel*/
@@ -141,8 +141,8 @@ a:hover {
     height: 64px;
     object-fit: cover;
     border-radius: 14px;
-    border: 2px solid #ffccd5;
-    box-shadow: 0 4px 10px rgba(255, 117, 143, 0.15);
+    border: 2px solid #c4b5fd;
+    box-shadow: 0 4px 10px rgba(139, 92, 246, 0.15);
     transition: transform 0.25s ease;
 }
 
@@ -155,15 +155,15 @@ a:hover {
     border-radius: 14px !important;
     border: 1.5px solid ffccd5 !important;
     padding: 0.65rem 1rem !important;
-    background-color: #fffafb !important;
+    background-color: #faf5ff !important;
     color: var(--text-dark) !important;
     transition: all 0.2s ease;
 }
 
 .form-control:focus, .form-select:focus {
-    border-color: #ff758f !important;
+    border-color: #8b5cf6 !important;
     background-color: #ffffff !important;
-    box-shadow: 0 0 0 0.25rem rgba(255, 117, 143, 0.22) !important;
+    box-shadow: 0 0 0 0.25rem rgba(139, 92, 246, 0.22) !important;
 }
 
 /*Preview Foto Sebelum Upload*/
@@ -173,8 +173,8 @@ a:hover {
     object-fit: cover;
     border-radius: 16px;
     margin-top: 10px;
-    border: 2px dashed #ff758f ;
+    border: 2px dashed #8b5cf6 ;
     padding: 6px;
-    background-color: #fff0f3;
+    background-color: #f5f3ff;
     display: none;
 }
