@@ -1,6 +1,5 @@
 <?php
 session_start();
-<<<<<<< HEAD
 include 'koneksi.php';
 
 $pesan = "";
@@ -41,7 +40,6 @@ if (isset($_POST['login'])) {
 
         <button type="submit" name="login">Login</button>
     </form>
-=======
 if(isset($_SESSION["status_login"]) && $_SESSION["status_login"] == true){
     header("Location: index.php");
     exit();
@@ -91,6 +89,5 @@ if(isset($_SESSION["status_login"]) && $_SESSION["status_login"] == true){
         </div>
     </div>
     <script src="script.js"></script>
->>>>>>> cfcdde5e2722b3dbb8cb47ab2b810e312264090b
 </body>
 </html>
