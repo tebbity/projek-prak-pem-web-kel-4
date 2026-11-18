@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+    --primary-court: #15803d;
+    --primary-dark: #14532d;
+    --accent-shuttle: #f59e0b;
+    --bg-surface: #f4f7f6;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--bg-surface) !important;
+    color: #1e293b;
+}
+
+/*Navbar*/
+.navbar.bg-dark {
+    background: linear-gradient(135deg, #0f172a 0%, #14532d 100%) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 0.85rem 0;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    letter-spacing: -0.3px;
+}
+
+.nav-link {
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: #4ade80 !important;
+}
+
+/*Card & Container*/
+.card {
+    border: none;
+    border-radius: 14px;
+    box-shadow: 0 6px 20px rgba(15, 23, 42, 0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.1);
+}
+
+/*Tombol utama*/
+.btn-primary {
+    background-color: var(--primary-court);
+    border-color: var(--primary-court);
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 0.5rem 1.1rem;
+    transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+    transform: rotateY(-1px);
+}
+
+.btn-warning, .btn-danger, .btn-success, .btn-secondary {
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+.btn-warning, .btn-danger, .btn-success, .btn-secondary, .btn-info {
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+/*Tabel Data*/
+.table {
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    vertical-align: middle;
+}
+
+.table thead th {
+    background-color: #1e293b !important;
+    color: #ffffff !important;
+    font-weight: 600;
+    border: none;
+    padding: 12px 14px;
+}
+
+.table tbody tr {
+    transition: background-color 0.15s ease;
+}
+
+.table tbody tr:hover {
+    background-color: #f0fdf4;
+}
+
+/*Foto Thumbnail Lapangan di Tabel*/
+.table td img {
+    width: 90px;
+    height: 62px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    transition: transform 0.25s ease;
+}
+
+.table td img:hover {
+    transform: scale(1.12);
+}
+
+/*Form Input*/
+.form-control, .form-select {
+    border-radius: 8px;
+    border: 1px solid #cbd5e1;
+    padding: 0.55rem 0.85rem;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--primary-court);
+    box-shadow: 0 0 0 0.2rem rgba(21, 128, 61, 0.2);
+}
+
+/*Preview Foto Sebelum Upload*/
+#preview-foto {
+    max-width: 220px;
+    max-height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-top: 10px;
+    border: 2px dashed #15803d;
+    padding: 4px;
+    display: none;
+}
