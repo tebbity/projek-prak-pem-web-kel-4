@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(isset($_SESSION["status_login"]) && $_SESSION["status_login"] == true){
+if (isset($_SESSION["status_login"]) && $_SESSION["status_login"] == true) {
     header("Location: index.php");
     exit();
 }
@@ -23,7 +23,7 @@ if(isset($_SESSION["status_login"]) && $_SESSION["status_login"] == true){
                     <div class="card-body">
                         <h2 class="card-title text-center mb-4">Login</h2>
                         <?php
-                        if(isset($_GET["pesan"]) && $_GET["pesan"] == "gagal"){
+                        if (isset($_GET["pesan"]) && $_GET["pesan"] == "gagal") {
                             echo '<div class="alert alert-danger" role="alert">Login gagal! Username atau password salah.</div>';
                         }
                         ?>
@@ -36,7 +36,7 @@ if(isset($_SESSION["status_login"]) && $_SESSION["status_login"] == true){
                                 <label for="password" class="form-label">Password</label>
                                 <input type="password" class="form-control" id="password" name="password" required>
                             </div>
-                            <button type="submit" class="btn btn-primary w-100">Login</button>
+                            <button type="submit" class="btn btn-success w-100">Login</button>
                         </form>
                         <div class="text-center mt-3">
                             <a href="register.php" class="text-decoration-none">Belum punya akun?</a>
@@ -48,6 +48,6 @@ if(isset($_SESSION["status_login"]) && $_SESSION["status_login"] == true){
             </div>
         </div>
     </div>
-    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
