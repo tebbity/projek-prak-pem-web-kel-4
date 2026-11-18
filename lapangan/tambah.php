@@ -18,7 +18,7 @@ if (isset($_POST['simpan'])) {
     move_uploaded_file($_FILES['foto']['tmp_name'], "../uploads/" . $nama_baru);
 
      mysqli_query($koneksi, "INSERT INTO lapangan (nama_lapangan, jenis_lantai, harga_per_jam, status, foto)
-                            VALUES ('$nama', '$lantai', '$harga', '$status', '$nama_baru)");
+                            VALUES ('$nama', '$lantai', '$harga', '$status', '$nama_baru')");
 
                             header("Location: index.php");
                             exit;
