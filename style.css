@@ -153,7 +153,7 @@ a:hover {
 /*Form Input*/
 .form-control, .form-select {
     border-radius: 14px !important;
-    border: 1.5px solid ffccd5 !important;
+    border: 1.5px solid #ffccd5 !important;
     padding: 0.65rem 1rem !important;
     background-color: #faf5ff !important;
     color: var(--text-dark) !important;
@@ -177,4 +177,10 @@ a:hover {
     padding: 6px;
     background-color: #f5f3ff;
     display: none;
+}
+
+.table .btn,
+.btn-sm {
+    padding: 0.28rem 0.75rem !important;
+    font-size: 0.82rem !important;
 }
